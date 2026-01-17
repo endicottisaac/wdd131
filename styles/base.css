@@ -132,13 +132,13 @@ main > h1 {
 }
 
 .card a {
-  color: var(--burnt-orange);
+  color: var(--accent-red);
   text-decoration: underline;
   transition: color 0.2s ease;
 }
 
 .card a:hover {
-  color: var(--burnt-orange);
+  color: var(--text-main);
 }
 
 .card:last-of-type {
