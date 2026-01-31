@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Taiwan</title>
+    <meta
+      name="description"
+      content="This is a country page for Taiwan in WDD 131 - Dynamic Web Fundamentals by Isaac Endicott."
+    />
+    <meta name="author" content="Isaac Endicott" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/place.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Taiwan</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Cuisine</a></li>
+          <li><a href="#">Travel</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            srcset="images/taiwan-hero-large.webp"
+            media="(min-width: 1000px)"
+          />
+          <source
+            srcset="images/taiwan-hero-medium.webp"
+            media="(min-width: 500px)"
+          />
+          <img
+            src="images/taiwan-hero-small.webp"
+            alt="Taipei 101 and cityscape at sunset"
+            width="1500"
+            height="750"
+          />
+        </picture>
+        <h2>Welcome to Taiwan</h2>
+      </section>
+      <section class="info">
+        <h2>About Taiwan</h2>
+        <p>
+          Taiwan is a vibrant island nation in East Asia, celebrated for its
+          night markets, lush mountains, and dynamic cities. From the towering
+          Taipei 101 to the breathtaking Taroko Valley, Taiwan blends tradition,
+          innovation, and natural beauty.
+        </p>
+      </section>
+      <section class="weather">
+        <h2>
+          Weather
+          <img
+            src="images/weather.svg"
+            class="weather-icon"
+            alt="Weather icon"
+            aria-label="partly cloudy"
+          />
+        </h2>
+        <div class="weather-details">
+          <p>Temperature: <span id="temp">68</span>°F</p>
+          <p>Wind Speed: <span id="wind">8</span> mph</p>
+          <p>Wind Chill: <span id="windChill"></span></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p><span id="currentyear"></span></p>
+      <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/place.js" defer></script>
+  </body>
+</html>
