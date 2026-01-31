@@ -12,8 +12,8 @@ function calculateWindChill(tempF, windMph) {
   ).toFixed(1);
 }
 
-const temp = 68;
-const wind = 8;
+const temp = parseFloat(document.getElementById("temp").textContent);
+const wind = parseFloat(document.getElementById("wind").textContent);
 const windChillSpan = document.getElementById("windChill");
 
 if (temp <= 50 && wind > 3) {
