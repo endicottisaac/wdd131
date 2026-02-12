@@ -1,0 +1,151 @@
+/* Site plan styles: uses the selected color schema and typography */
+:root {
+  --primary: #264653;
+  --accent: #e76f51;
+  --neutral: #f7f7f7;
+  --body-font:
+    "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  --display-font: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--body-font);
+  background: var(--neutral);
+  color: #222;
+  margin: 0;
+  line-height: 1.5;
+  padding: 24px;
+}
+.site-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.site-header h1 {
+  font-family: var(--display-font);
+  color: var(--primary);
+  margin: 8px 0 0 0;
+}
+.site-header .tagline {
+  color: #555;
+  margin: 4px 0 12px 0;
+}
+.logo {
+  display: inline-block;
+}
+
+.test-logo {
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  font-family: var(--display-font);
+  font-weight: 700;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+section {
+  background: white;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+h2 {
+  color: var(--primary);
+  font-family: var(--display-font);
+  margin: 0 0 8px 0;
+}
+
+.colors {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.colors li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+.example {
+  width: 28px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+.example.primary {
+  background: var(--primary);
+}
+.example.accent {
+  background: var(--accent);
+}
+.example.neutral {
+  background: var(--neutral);
+}
+
+.type-samples .sample-heading {
+  font-family: var(--display-font);
+  color: var(--primary);
+  margin: 6px 0;
+}
+.type-samples .sample-body {
+  font-family: var(--body-font);
+  color: #333;
+}
+
+.wireframes {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.wireframe {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+.wireframe .wf {
+  height: 48px;
+  background: #f8f8f8;
+  border-radius: 4px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+.wireframe.desktop .wf.row {
+  display: block;
+}
+.wireframe.desktop .sidebar,
+.wireframe.desktop .maincol,
+.wireframe .footer {
+  height: 60px;
+  background: #f8f8f8;
+  margin: 8px 0;
+}
+
+.site-footer {
+  text-align: center;
+  margin-top: 24px;
+  color: #666;
+}
+
+code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}

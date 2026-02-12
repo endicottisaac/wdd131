@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Plan - Favorite Food Recipe Collection</title>
+    <meta
+      name="description"
+      content="Site plan for Favorite Food Recipe Collection by Isaac Endicott."
+    />
+    <meta name="author" content="Isaac Endicott" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/siteplan.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="logo" aria-hidden="true">
+        <div class="test-logo" role="img" aria-label="Test logo">TEST</div>
+      </div>
+      <h1>Favorite Food Recipe Collection</h1>
+      <p class="tagline">Recipes, notes, and experiments in cooking</p>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Site Name</h2>
+        <p>
+          <strong>Favorite Food Recipe Collection</strong> — A personal
+          collection of my favorite recipes, notes, and experiments in cooking.
+          The name communicates the site's focus on specific recipes rather than
+          a blog or ad-driven site.
+        </p>
+      </section>
+
+      <section>
+        <h2>Site Purpose</h2>
+        <p>
+          The site provides a searchable collection of recipes with ingredients,
+          step-by-step instructions, personal notes (tips/tricks), and a gallery
+          of completed dishes. It also includes a simple form to add new recipes
+          and a highlight area for recent favorites.
+        </p>
+      </section>
+
+      <section>
+        <h2>Scenarios</h2>
+        <ul>
+          <li>
+            As a weekday cook, I need a quick recipe with affordable ingredients
+            I can prepare in under 45 minutes.
+          </li>
+          <li>
+            As an experimenter, I want clear notes and tips on techniques (stuff
+            like pastrami brine, sous-vide times) so I can reproduce the result.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Color Schema</h2>
+        <p>Selected colors and usage:</p>
+        <ul class="colors">
+          <li>
+            <span class="example primary"></span> <strong>Primary:</strong> used
+            for headings, primary buttons, and accents. Color:
+            <code>#264653</code>
+          </li>
+          <li>
+            <span class="example accent"></span> <strong>Accent:</strong> used
+            for highlights, logo, and call-to-action elements. Color:
+            <code>#E76F51</code>
+          </li>
+          <li>
+            <span class="example neutral"></span>
+            <strong>Neutral:</strong> background and body text contrast. Color:
+            <code>#F7F7F7</code>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Typography</h2>
+        <p>Fonts and usage:</p>
+        <ul>
+          <li><strong>Playfair Display</strong> — Headings and display text</li>
+          <li>
+            <strong>Source Sans Pro</strong> — Body text, captions, navigation,
+            forms, etc.
+          </li>
+        </ul>
+        <div class="type-samples">
+          <h3 class="sample-heading">Sample Heading — Playfair Display</h3>
+          <p class="sample-body">Sample body text using Source Sans Pro</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Wireframes</h2>
+        <p>
+          Simple wireframes showing layout relationships (mobile and desktop).
+        </p>
+        <div class="wireframes">
+          <div class="wireframe mobile">
+            <h3>Mobile (narrow)</h3>
+            <div class="wf header">Header / Logo</div>
+            <div class="wf hero">Intro &amp; featured recipe</div>
+            <div class="wf list">Recipe list / cards</div>
+            <div class="wf nav">Bottom nav</div>
+          </div>
+
+          <div class="wireframe desktop">
+            <h3>Desktop (wide)</h3>
+            <div class="wf row">
+              <div class="wf sidebar">Sidebar (filters, categories)</div>
+              <div class="wf maincol">
+                Main content: featured + list/gallery
+              </div>
+            </div>
+            <div class="wf footer">Footer</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year">2026</span> - Isaac Endicott</p>
+    </footer>
+  </body>
+</html>
