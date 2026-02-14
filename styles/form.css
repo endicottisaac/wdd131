@@ -161,7 +161,7 @@ textarea {
 
 button[type="submit"],
 .button {
-  background: var(--burnt-orange);
+  background: var(--accent-red);
   color: var(--white);
   border: none;
   padding: 1rem 2rem;
@@ -179,7 +179,7 @@ button[type="submit"],
 
 button[type="submit"]:hover,
 .button:hover {
-  background: var(--accent-red);
+  background: var(--text-main);
 }
 
 .confirmation-message {
