@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Review Form - WDD 131 Isaac Endicott</title>
+    <meta
+      name="description"
+      content="Product review form page for WDD 131 by Isaac Endicott."
+    />
+    <meta name="author" content="Isaac Endicott" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/form.css" />
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Product Review Form</h1>
+    </header>
+    <main>
+      <form method="get" action="review.html">
+        <fieldset>
+          <legend>Product Information</legend>
+
+          <label for="productName"
+            >Product Name <span class="required">*</span></label
+          >
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+          </select>
+
+          <label>Overall Rating <span class="required">*</span></label>
+          <div class="rating-group">
+            <input type="radio" id="rating1" name="rating" value="1" required />
+            <label for="rating1">&star;</label>
+
+            <input type="radio" id="rating2" name="rating" value="2" />
+            <label for="rating2">&star;&star;</label>
+
+            <input type="radio" id="rating3" name="rating" value="3" />
+            <label for="rating3">&star;&star;&star;</label>
+
+            <input type="radio" id="rating4" name="rating" value="4" />
+            <label for="rating4">&star;&star;&star;&star;</label>
+
+            <input type="radio" id="rating5" name="rating" value="5" />
+            <label for="rating5">&star;&star;&star;&star;&star;</label>
+          </div>
+
+          <label for="installDate"
+            >Date of Installation <span class="required">*</span></label
+          >
+          <input type="date" id="installDate" name="installDate" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Features</legend>
+
+          <label>Useful Features</label>
+          <div class="checkbox-group">
+            <div>
+              <input
+                type="checkbox"
+                id="easyToUse"
+                name="features"
+                value="Easy to Use"
+              />
+              <label for="easyToUse">Easy to Use</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="durable"
+                name="features"
+                value="Durable"
+              />
+              <label for="durable">Durable</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="affordable"
+                name="features"
+                value="Affordable"
+              />
+              <label for="affordable">Affordable</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="goodQuality"
+                name="features"
+                value="Good Quality"
+              />
+              <label for="goodQuality">Good Quality</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Review</legend>
+
+          <label for="writtenReview">Written Review</label>
+          <textarea
+            id="writtenReview"
+            name="writtenReview"
+            rows="5"
+            placeholder="Share your experience with this product..."
+          ></textarea>
+
+          <label for="userName">Your Name</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            placeholder="John Doe"
+          />
+        </fieldset>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </main>
+    <footer>
+      <p><span id="currentyear"></span></p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

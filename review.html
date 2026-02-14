@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Confirmation - WDD 131 Isaac Endicott</title>
+    <meta
+      name="description"
+      content="Review confirmation page for WDD 131 by Isaac Endicott."
+    />
+    <meta name="author" content="Isaac Endicott" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/form.css" />
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Thank You!</h1>
+    </header>
+    <main>
+      <div class="confirmation-message">
+        <h2>Your review has been submitted successfully!</h2>
+        <p>We appreciate you taking the time to share your feedback.</p>
+        <p class="review-count">
+          You have completed <span id="reviewCount">0</span> review(s).
+        </p>
+        <a href="form.html" class="button">Submit Another Review</a>
+      </div>
+    </main>
+    <footer>
+      <p><span id="currentyear"></span></p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
