@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Recipe | Favorite Food Recipe Collection</title>
+    <meta
+      name="description"
+      content="WDD131 Isaac's final project a recipe collection form"
+    />
+    <meta name="author" content="Isaac Endicott" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/add-recipe.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <h1><a href="index.html">Recipe Collection</a></h1>
+          </div>
+          <nav class="main-nav" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+              ☰
+            </button>
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+              <li>
+                <a href="add-recipe.html" class="nav-link active">Add Recipe</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h2>Add New Recipe</h2>
+          <p>
+            Add a new recipe to the collection, include ingredients,
+            instructions, and personal notes, and a picture!
+          </p>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <div class="container">
+          <form class="recipe-form" id="recipe-form" novalidate>
+            <fieldset class="form-section-group">
+              <legend>Basic Information</legend>
+
+              <div class="form-group">
+                <label for="recipe-name" class="required">Recipe Name</label>
+                <input
+                  type="text"
+                  id="recipe-name"
+                  name="recipeName"
+                  required
+                  maxlength="100"
+                  class="form-control"
+                />
+                <div class="error-message" id="recipe-name-error"></div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="category" class="required">Category</label>
+                  <select
+                    id="category"
+                    name="category"
+                    required
+                    class="form-control"
+                  >
+                    <option value="">Select a category</option>
+                    <option value="main">Main Dishes</option>
+                    <option value="appetizer">Appetizers</option>
+                    <option value="dessert">Desserts</option>
+                    <option value="soup">Soups</option>
+                    <option value="side">Side Dishes</option>
+                  </select>
+                  <div class="error-message" id="category-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="difficulty" class="required"
+                    >Difficulty Level</label
+                  >
+                  <select
+                    id="difficulty"
+                    name="difficulty"
+                    required
+                    class="form-control"
+                  >
+                    <option value="">Select difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                  </select>
+                  <div class="error-message" id="difficulty-error"></div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="prep-time">Prep Time (minutes)</label>
+                  <input
+                    type="number"
+                    id="prep-time"
+                    name="prepTime"
+                    min="1"
+                    max="480"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="cook-time">Cook Time (minutes)</label>
+                  <input
+                    type="number"
+                    id="cook-time"
+                    name="cookTime"
+                    min="1"
+                    max="480"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="servings">Servings</label>
+                  <input
+                    type="number"
+                    id="servings"
+                    name="servings"
+                    min="1"
+                    max="20"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="3"
+                  maxlength="500"
+                  class="form-control"
+                  placeholder="Brief description of the recipe..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="image-url" class="required">Picture URL</label>
+                <input
+                  type="url"
+                  id="image-url"
+                  name="imageUrl"
+                  required
+                  class="form-control"
+                  placeholder="https://example.com/recipe-photo.jpg"
+                />
+                <div class="error-message" id="image-url-error"></div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section-group">
+              <legend>Ingredients</legend>
+
+              <div class="dynamic-list" id="ingredients-list">
+                <div class="list-item">
+                  <label for="ingredient-0" class="sr-only">Ingredient 1</label>
+                  <input
+                    type="text"
+                    id="ingredient-0"
+                    name="ingredient-0"
+                    placeholder="e.g., 2 cups all-purpose flour"
+                    class="form-control ingredient-input"
+                    required
+                  />
+                </div>
+              </div>
+
+              <button type="button" id="add-ingredient" class="add-btn">
+                Add Another Ingredient
+              </button>
+            </fieldset>
+
+            <fieldset class="form-section-group">
+              <legend>Instructions</legend>
+
+              <div class="dynamic-list" id="instructions-list">
+                <div class="list-item">
+                  <label for="instruction-0" class="sr-only">Step 1</label>
+                  <textarea
+                    id="instruction-0"
+                    name="instruction-0"
+                    rows="2"
+                    placeholder="Describe the first step..."
+                    class="form-control instruction-input"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="button" id="add-instruction" class="add-btn">
+                Add Another Step
+              </button>
+            </fieldset>
+
+            <fieldset class="form-section-group">
+              <legend>Personal Notes and Tips</legend>
+
+              <div class="form-group">
+                <label for="notes">Notes and Tips</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="4"
+                  maxlength="1000"
+                  class="form-control"
+                  placeholder="Share any tips, substitutions, or personal notes about this recipe..."
+                  required
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Save Recipe</button>
+              <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+
+            <div
+              class="form-message"
+              id="form-message"
+              style="display: none"
+            ></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; <span id="year"></span> Isaac Endicott - Utah/Taiwan</p>
+          <p>Last edited: <span id="last-edited"></span></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

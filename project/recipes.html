@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes | Favorite Food Recipe Collection</title>
+    <meta
+      name="description"
+      content="WDD131 Isaac's final project a page holding all of the recipes that have been added"
+    />
+    <meta name="author" content="Isaac Endicott" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/main.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <h1><a href="index.html">Recipe Collection</a></h1>
+          </div>
+          <nav class="main-nav" aria-label="Main navigation">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+              ☰
+            </button>
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li>
+                <a href="recipes.html" class="nav-link active">Recipes</a>
+              </li>
+              <li><a href="add-recipe.html" class="nav-link">Add Recipe</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h2>All Recipes</h2>
+          <p>
+            Discover delicious recipes with detailed instructions and personal
+            notes
+          </p>
+        </div>
+      </section>
+
+      <section class="recipes-content">
+        <div class="container">
+          <div class="recipe-results">
+            <div class="results-header">
+              <span id="results-count">0 recipes total</span>
+            </div>
+
+            <div class="recipe-container" id="recipe-container"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; <span id="year"></span> Isaac Endicott - Utah/Taiwan</p>
+          <p>Last edited: <span id="last-edited"></span></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
